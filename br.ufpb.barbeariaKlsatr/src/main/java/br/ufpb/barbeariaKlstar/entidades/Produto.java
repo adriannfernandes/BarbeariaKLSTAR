@@ -1,31 +1,31 @@
 package br.ufpb.barbeariaKlstar.entidades;
 
-public class Produto {
+public abstract class Produto {
 
-    private String name;
-    private String price;
+    private String nome;
+    private String preco;
 
-    public Produto(String name, String price) {
-        this.name = name;
-        this.price = price;
+    public Produto(String nome, String preco) {
+        this.nome = nome;
+        this.preco = preco;
     }
 
     public Produto() {
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getPrice() {
-        return price;
+    public String getPreco() {
+        return preco;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setPreco(String preco) {
+        this.preco = preco;
     }
 }
