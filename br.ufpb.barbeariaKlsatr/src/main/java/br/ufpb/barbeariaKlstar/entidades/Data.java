@@ -1,4 +1,4 @@
-package br.ufpb.barbeariaKlstar.entidades;
+/*package br.ufpb.barbeariaKlstar.entidades;
 
 public class Data{
 
@@ -74,5 +74,5 @@ public class Data{
         System.out.println("Agendamento concluido");
     } else {
         //RETORNA A MENSAGEM DE ERRO E FAZ O CLIENTE ALTERAR OS DADOS DE DATA
-    }
+    }*/
 

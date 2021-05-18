@@ -1,6 +1,6 @@
 package br.ufpb.barbeariaKlstar.entidades;
 
-public enum CategoriaProdutoDiverso {
+public enum CategoriaProdutoFisico {
 
     ROUPA, CREME, POMADA
 
