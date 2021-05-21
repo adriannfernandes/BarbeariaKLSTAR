@@ -92,6 +92,16 @@ public class SistemaBarbeariaCL implements SistemaBarbearia{
     }
 
     @Override
+    public boolean agendarHorario(String hora, Horario horario) {
+        if (this.horariosAgendados.containsKey(hora)){
+            return false;
+        } else {
+            this.horariosAgendados.put(hora, horario);
+            return true;
+        }
+    }
+
+    @Override
     public Collection<Funcionario> pesquisaFuncionarioPorNome(String nome) {
         Collection<Funcionario> funcionariosPorNome = new ArrayList<>();
         for (Funcionario f: this.funcionarios.values()) {
@@ -124,13 +134,5 @@ public class SistemaBarbeariaCL implements SistemaBarbearia{
         }
     }
 
-    @Override
-    public boolean agendarHorario(String hora, Horario horario) {
-        if (this.horariosAgendados.containsKey(hora)){
-            return false;
-        } else {
-            this.horariosAgendados.put(hora, horario);
-            return true;
-        }
-    }
+
 }

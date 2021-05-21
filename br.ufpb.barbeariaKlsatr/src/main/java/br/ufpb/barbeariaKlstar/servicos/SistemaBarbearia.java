@@ -2,6 +2,7 @@ package br.ufpb.barbeariaKlstar.servicos;
 
 import br.ufpb.barbeariaKlstar.entidades.Cliente;
 import br.ufpb.barbeariaKlstar.entidades.Funcionario;
+import br.ufpb.barbeariaKlstar.entidades.Horario;
 import br.ufpb.barbeariaKlstar.entidades.Produto;
 
 import java.util.Collection;
@@ -22,11 +23,12 @@ public interface SistemaBarbearia {
 
     public boolean existeFuncionario(String cpf);
 
-    //public boolean agendarHorario();
+    public boolean agendarHorario(String hora, Horario horario);
 
     public Collection<Funcionario> pesquisaFuncionarioPorNome(String nome);
 
     public boolean cadastrarCliente(String nome, String telefone, String email);
 
     public boolean existeCliente(String telefone);
+
 }
