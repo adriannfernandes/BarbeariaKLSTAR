@@ -1,9 +1,6 @@
 package br.ufpb.barbeariaKlstar.servicos;
 
-import br.ufpb.barbeariaKlstar.entidades.Cliente;
-import br.ufpb.barbeariaKlstar.entidades.Funcionario;
-import br.ufpb.barbeariaKlstar.entidades.Produto;
-import br.ufpb.barbeariaKlstar.entidades.ProdutoFisico;
+import br.ufpb.barbeariaKlstar.entidades.*;
 
 import java.util.*;
 
@@ -13,6 +10,7 @@ public class SistemaBarbeariaCL implements SistemaBarbearia{
     private HashMap<String, Funcionario> funcionarios;
     private HashMap<String, Produto> produtos;
     private HashMap<String, Cliente> clientes;
+    private HashMap<String, Horario> horariosAgendados;
 
 
     public SistemaBarbeariaCL() {
@@ -126,4 +124,13 @@ public class SistemaBarbeariaCL implements SistemaBarbearia{
         }
     }
 
+    @Override
+    public boolean agendarHorario(String hora, Horario horario) {
+        if (this.horariosAgendados.containsKey(hora)){
+            return false;
+        } else {
+            this.horariosAgendados.put(hora, horario);
+            return true;
+        }
+    }
 }
