@@ -29,4 +29,6 @@ public interface SistemaBarbearia {
     public boolean cadastrarCliente(String nome, String telefone, String email);
 
     public boolean existeCliente(String telefone);
+
+    public Cliente pesquisarCliente(String telefone);
 }

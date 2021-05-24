@@ -126,4 +126,17 @@ public class SistemaBarbeariaCL implements SistemaBarbearia{
         }
     }
 
+    @Override
+    public Cliente pesquisarCliente(String telefone) {
+
+        for (String i : clientes.keySet()) {
+            if (clientes.get(i).getTelefone().equals(telefone)) {
+                return clientes.get(i);
+
+            }
+        }
+        return null;
+
+    }
+
 }
