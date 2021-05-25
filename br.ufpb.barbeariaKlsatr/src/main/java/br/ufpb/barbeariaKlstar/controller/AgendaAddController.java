@@ -1,4 +1,6 @@
-package br.ufpb.barbeariaKlstar.servicos;
+package br.ufpb.barbeariaKlstar.controller;
+
+import br.ufpb.barbeariaKlstar.servicos.SistemaBarbearia;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
