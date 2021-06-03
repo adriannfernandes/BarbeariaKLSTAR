@@ -1,6 +1,6 @@
 package br.ufpb.barbeariaKlstar.entidades;
 
-public abstract class Produto {
+public class Produto {
 
     private String nome;
     private double preco;

@@ -34,4 +34,8 @@ public interface SistemaBarbearia {
 
     public Cliente pesquisarCliente(String telefone);
 
+    public boolean gravarDados();
+
+    public void recuperarDados();
+
 }

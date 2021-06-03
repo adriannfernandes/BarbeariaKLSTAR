@@ -23,6 +23,7 @@ public class SistemaBarbeariaGUI extends JFrame {
             { "Sábado", "Disponóvel" }};
 
     public SistemaBarbeariaGUI() {
+        agenda.recuperarDados();
         setTitle("Sistema Barbearia");
         setSize(600, 400); // tamanho da janela
         setLocation(150, 150);
@@ -58,6 +59,26 @@ public class SistemaBarbeariaGUI extends JFrame {
         JMenu menuHorario = new JMenu("Horários");
         JMenuItem menuListarHorarios = new JMenuItem("Listar Horários");
         menuHorario.add(menuListarHorarios);
+
+        //Area do menu
+        JMenu suporte = new JMenu("Suporte");
+        JMenuItem gravarDados = new JMenuItem("Gravar Registros");
+        JMenuItem exit = new JMenuItem("Sair");
+        suporte.add(gravarDados);
+        suporte.add(exit);
+
+        gravarDados.addActionListener((ae) -> {
+            //VAI ATUALIZAR TODOS OS ARQUIVOS
+            agenda.gravarDados();
+        });
+        exit.addActionListener((ae) -> {
+            String salvar = JOptionPane.showInputDialog("Deseja salvar os registros? ");
+            if(salvar.equals("sim")){
+                agenda.gravarDados();
+                System.exit(0);
+            }
+            System.exit(0);
+        });
 
         // menuPesquisarCliente.addActionListener(new AgendaSearchController(agenda,
         // this));
@@ -126,6 +147,7 @@ public class SistemaBarbeariaGUI extends JFrame {
         barraDeMenu.add(menuCliente);
         barraDeMenu.add(menuFuncionario);
         barraDeMenu.add(menuHorario);
+        barraDeMenu.add(suporte);
         setJMenuBar(barraDeMenu);
     }
 
